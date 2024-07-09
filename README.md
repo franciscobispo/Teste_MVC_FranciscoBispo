@@ -46,14 +46,16 @@ Este projeto é um sistema web para o gerenciamento de clientes de uma empresa. 
 
 ## Estrutura do Projeto
 
-- **Controllers**: Contém os controladores da aplicação.
-    - `CustomerController.cs`: Controlador responsável pelo gerenciamento de clientes.
+- **Controllers**: Contém os controladores da aplicação.    
+    - `ClienteController.cs`: Controlador responsável pelo gerenciamento de clientes.
+    - `HomeController.cs`: Controlador responsável pela página Home (Página atualmente vazia, mantida apenas para testes).
 - **Models**: Contém as classes de modelo.
-    - `Customer.cs`: Modelo representando um cliente.
+    - `Cliente.cs`: Modelo representando um cliente.
+    - `DocumentoAttribute.cs`: Contém um atributo customizado, para validação no backend para o campo Documento.
 - **Views**: Contém as views da aplicação.
-    - `Customer`: Contém as views relacionadas aos clientes (`Create`, `Edit`, `Delete`, `Details`, `Index`).
+    - `Cliente`: Contém as views relacionadas aos clientes (`Create`, `Edit`, `Delete`, `Details`, `Index`).
 - **Scripts**: Contém arquivos JavaScript.
-    - `validation.js`: Contém a lógica de validação de CPF e CNPJ.
+    - `clienteValidation.js`: Contém a lógica de validação de para a entidade Cliente.
 - **Content**: Contém arquivos CSS.
     - `site.css`: Contém a estilização das páginas.
 
@@ -65,7 +67,3 @@ Este projeto é um sistema web para o gerenciamento de clientes de uma empresa. 
     - **Listar Clientes**: Visualize a lista de clientes, use os campos de busca para filtrar os resultados.
     - **Editar Cliente**: Clique em "Editar" ao lado do cliente que deseja modificar.
     - **Excluir Cliente**: Clique em "Excluir" ao lado do cliente que deseja remover.
-
-## Licença
-
-Este projeto é licenciado sob os termos da licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
