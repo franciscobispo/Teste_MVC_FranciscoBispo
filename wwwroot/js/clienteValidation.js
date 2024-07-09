@@ -83,72 +83,19 @@ function validateCNPJ(cnpj) {
     return true;
 }
 
-//$(document).ready(function () {
-//    function setMaskAndValidation() {
-//        var type = $("#Tipo").val();
-//        if (type == 0) {
-//            $("#Documento").mask("000.000.000-00");
-//        } else if (type == 1) {
-//            $("#Documento").mask("00.000.000/0000-00");
-//        }
-//    }
-
-//    $("#Tipo").change(function () {
-//        setMaskAndValidation();
-//    });
-
-//    setMaskAndValidation();
-//});
-
 $(document).ready(function () {
     function setMaskAndValidation() {
         var type = $("#Tipo").val();
         var documentField = $("#Documento");
         var value = $("#Documento").val();
-        //if (type == 0) {
-        //    $("#Documento").mask("000.000.000-00");
-        //} else if (type == 1) {
-        //    $("#Documento").mask("00.000.000/0000-00");
-        //}
         if (type == 0) {
-            //documentField.mask("000.000.000-00");
-            //documentField.unmask();
             $("#Documento").mask("000.000.000-00");
-            ////$("#Documento").unmask();
-            //if (isNaN(value))
-            //    Validate(type, value);
-            ////documentField.on("blur", function () {
-            //$("#Documento").on("blur", function () {
-            //    //var value = $("#Documento").val();
-            //    //if (!validateCPF(value)) {
-            //    //    alert("CPF inválido");
-            //    //    $("#Documento").val("");
-            //    //}
-            //    if (isNaN($("#Documento").val()))
-            //        Validate(type, $("#Documento").val());
-            //});
         } else if (type == 1) {
-            /*documentField.mask("00.000.000/0000-00");*/
-            //documentField.unmask();
             $("#Documento").mask("00.000.000/0000-00");
-            //if (isNaN(value))
-            //    Validate(type, value);
-            ////$("#Documento").unmask();
-            ////documentField.on("blur", function () {
-            //$("#Documento").on("blur", function () {
-            //    //var value = $("#Documento").val();
-            //    //if (!validateCNPJ(value)) {
-            //    //    alert("CNPJ inválido");
-            //    //    $("#Documento").val("");
-            //    //}
-            //    if (isNaN($("#Documento").val()))
-            //        Validate(type, $("#Documento").val());
-            //});
         }
     }
 
     function Validate(type, value) {
-        //var value = $("#Documento").val();
         if (isNaN(value))
             if (type == 0) {
                 if (!validateCPF(value)) {
@@ -171,11 +118,6 @@ $(document).ready(function () {
     });
 
     $("#Documento").on("blur", function () {
-        //var value = $("#Documento").val();
-        //if (!validateCNPJ(value)) {
-        //    alert("CNPJ inválido");
-        //    $("#Documento").val("");
-        //}
         if (isNaN($("#Documento").val()))
             Validate($("#Tipo").val(), $("#Documento").val());
     });
