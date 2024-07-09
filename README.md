@@ -25,7 +25,7 @@ Este projeto é um sistema web para o gerenciamento de clientes de uma empresa. 
 
 1. Clone o repositório:
     ```sh
-    git clone https://github.com/seu-usuario/seu-repositorio.git
+    git clone https://github.com/franciscobispo/Teste_MVC_FranciscoBispo.git
     ```
 
 2. Abra o projeto no Visual Studio.
