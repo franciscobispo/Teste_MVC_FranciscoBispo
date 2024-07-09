@@ -1,0 +1,54 @@
+﻿@model Teste_MVC_FranciscoBispo.Models.Cliente
+
+@{
+    ViewBag.Title = "Deletar Cliente";
+}
+
+<h1>Deletar Cliente</h1>
+
+<h3>Confirma a exclusão do Cliente?</h3>
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Documento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Documento)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataCadastro)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataCadastro)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Telefone)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-actions no-color">
+            <input type="submit" value="Deletar" class="btn btn-danger" /> |
+            @Html.ActionLink("Voltar para Lista", "Index")
+        </div>
+    }
+</div>
